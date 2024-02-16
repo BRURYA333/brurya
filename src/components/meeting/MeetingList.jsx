@@ -1,23 +1,30 @@
-import { Outlet, useParams } from "react-router-dom";
+import { observer } from "mobx-react";
+import { Link, Outlet, useParams } from "react-router-dom";
+import MeetingStore from "../../store/MeetingStore";
+import { useEffect } from "react";
+import { setMeetings } from "../../store/meetingServer";
 // import ServiceList from "../Services/ServicesList";
 
-function MeetingList() {
-  // const {date}=useParams();
-  const meetingList =[];
+const MeetingList = observer(() => {
 
+
+  useEffect(() => {
+    if (!MeetingStore.meetingList.length) {
+      setMeetings()
+    }
+  }, [])
   return (
     <>
       <h1>Meeting List</h1>
-      {/* <div className="background">
-        {meetingList.map((m, i) => <div key={i}>
-          <Link to={i}>{m.service}</Link>
+      <div>
+        {MeetingStore.meetingList.map((m, i) => <div key={i}>
+          <Link to={i}>{m.clientEmail}</Link>
         </div>
         )}
       </div>
       <br />
-      <outlet context={[ServiceList[date]]} /> */}
     </>
   )
-}
+})
 
 export default MeetingList

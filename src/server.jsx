@@ -1,5 +1,5 @@
 import axios from "axios";
-import dataStore from "..node_modules/dataStore";
+
 
 export async function  ChekLogin(name, password){
     debugger;

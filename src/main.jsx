@@ -7,44 +7,59 @@ import ServiceList from './components/services/ServicesList.jsx';
 import MeetingList from './components/meeting/MeetingList.jsx';
 import AdminHome from './components/admin/AdminHome.jsx';
 import Login from './components/admin/Login.jsx';
+import AdminPage from './components/admin/AdminPage.jsx';
+import BusinessDetailsComponent from './components/admin/BusinessDetailsComponent.jsx';
 
+{/* <nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav> */}
 
 const router = createBrowserRouter([
 
   {
     path: '/',
-    element: <User/>,
-    errorElement:<div>error DesignWorksConstruction</div>,
+    element: <User />,
+    // errorElement:<div>error services list !</div>,
 
   },
- 
+
   {
     path: '/admin',
-    element: <Login/>,
-    errorElement: <div>error login</div>,
+    element: <AdminPage />,
+    // errorElement: <div>error login</div>,
     children: [
-   
+
       {
         path: 'services',
-        element: <ServiceList/>,
-        errorElement: <div>error ServicesList not found</div>
+        element: <ServiceList />,
+        // errorElement: <div>error ServicesList not found</div>
       },
 
       {
         path: 'meeting',
-        element:<MeetingList/>,
-        errorElement: <div>error MeetingList not found</div>
+        element: <MeetingList />,
+        // errorElement: <div>error MeetingList not found</div>
+      },
+      {
+        path: 'edit',
+        element: <BusinessDetailsComponent />,
+        // errorElement: <div>error business details not found</div>
       }
     ]
   }
-  
+
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <React.StrictMode>
+  <RouterProvider router={router} />
+  // <React.StrictMode>
 
-    <RouterProvider router={router}/>
-   
-  </React.StrictMode>,
+
+  // </React.StrictMode>,
 )
+
 

@@ -23,14 +23,5 @@ function EventsAdmin() {
   )
 }
 
-const business = {
-  name: "Coding Academy",
-  address: "Rothschild 60 Tel Aviv",
-  phone: "03-1234567",
-  owner: "Yariv Katz",
-  logo: "https://coding-academy.org/images/ca_logo.png",
-  description: "The best coding academy in the world",
-};
-
 
 export default EventsAdmin

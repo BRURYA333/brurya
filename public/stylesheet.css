@@ -1,0 +1,57 @@
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* לדוגמה, עבור אוריאל וגופני סאנס-סריף ברירת המחדל */
+}
+/* סגנון עבור תפריט הניווט */
+header {
+    /*background-color: #ffffff; /* רקע עבור ההדגשה */
+    padding: 30px 0; /* מרווח סביב התפריט */
+    text-align: right; /* יישור התפריט לימין */
+}
+
+nav ul {
+    list-style-type: none;
+    margin:5;
+    padding: 15;
+   margin-right: 30%;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 11, 93); /* צבע הטקסט כאשר מעבירים עליו את העכבר */
+}
+
+/* סגנון עבור התמונה */
+.link-image {
+    max-width: 200px;
+    height: auto; /* אורך מתאים בהתאם לרוחב */
+    transition: transform 0.5s;
+    margin-right: 20px; /* מרווח מימין בין התמונות */
+    margin-top: 300px;
+}
+
+/* סגנון כאשר המשתמש עובר מעל התמונה */
+.link-image:hover {
+    transform: scale(1.1);
+}
+.container {
+    position: fixed; /* או position: absolute; */
+    bottom: 0;
+    left: 0; /* או ימין: 0; */
+    width: 100%;
+    display: flex; /* או grid */
+    justify-content: center; /* אם תרצה את התמונות ממורכזות */
+    background-color: #f0f0f0; /* רקע לדוגמה */
+    padding: 10px; /* מרווח סביב התמונות */
+}

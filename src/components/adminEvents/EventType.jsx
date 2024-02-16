@@ -1,5 +1,5 @@
 import { useState } from "react";
-import dataStore from "../../store/dataStore";
+import dataStore from "../../store/serviceStore";
 import { observer } from "mobx-react";
 
 
@@ -10,7 +10,7 @@ const [isEditMode, setIsEditMode] = useState(false)
     <>
       {isEditMode ? <div>edit event type</div> : <div>event type to view</div>}
       
-      {dataStore.isLogin && <button onClick={() => setIsEditMode(!isEditMode)}>edit toggle</button>}
+      {/* {dataStore.isLogin && <button onClick={() => setIsEditMode(!isEditMode)}>edit toggle</button>} */}
     </>
   )
 }
