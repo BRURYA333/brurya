@@ -1,10 +1,12 @@
 import AdminStore from "./AdminStore";
 
-export async function UpdateBusinessDetails(data) {
+
+//server
+export async function UpdateBusinessDetails() {
     try {
-        const response = await axios.post("http://localhost:8787", data);
+        const response = await axios.post("http://localhost:8787/admin");
         if (response.status === 200) {
-            AdminStore.updateService(data);
+            AdminStore.UpdateBusinessDetails(response.data);
         }
     }
     catch (e) {

@@ -33,6 +33,7 @@ const AdminHome = observer(() => {
      
       <div className='button-container'>
         <Button variant="outlined" ><Link to="services">services</Link></Button>
+        <Button variant="outlined" ><Link to="services">add service</Link></Button>
         <Button variant="outlined" ><Link to="meeting">meeting</Link></Button>
         <Button variant="outlined" ><Link to="edit">edit</Link></Button>
       </div>

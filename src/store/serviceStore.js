@@ -7,7 +7,7 @@ class ServiceStore {
   services = [];
 
 
-  //export typa data
+  //export type data
   constructor() {
     makeObservable(this, {
       services: observable,

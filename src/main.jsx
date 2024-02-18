@@ -48,6 +48,11 @@ const router = createBrowserRouter([
         path: 'edit',
         element: <BusinessDetailsComponent />,
         // errorElement: <div>error business details not found</div>
+      },
+      {
+        path: 'addService',
+        element: <AddServiceToserver />,
+        // errorElement: <div>error business details not found</div>
       }
     ]
   }

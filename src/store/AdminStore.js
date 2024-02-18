@@ -15,6 +15,7 @@ class AdminStore {
         makeObservable(this, {
             data: observable,
             UpdateBusinessDetails: action
+            
         }
         )
     }
