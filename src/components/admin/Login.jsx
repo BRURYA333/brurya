@@ -7,21 +7,19 @@ import dataStore from '../../store/serviceStore';
 import BusinessDetailsComponent from './BusinessDetailsComponent';
 
 
-const Login = ({setIsLogin}) => {
+const Login = ({ setIsLogin }) => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
-
   const handleLogIn = async () => {
-    setIsLogin(true);
+    setIsLogin(false);
 
-
-    const response={"status":200}
+    const response = { "status": 200 }
     console.log(response.statusText);
 
     if (response.status === 200) {
-      // localStorage.setItem("isLogin", true);
-      // dataStore.setIsLogin(true);
+      localStorage.setItem("isLogin", true);
+      dataStore.setIsLogin(true);
 
       // let timerInterval;
       // Swal.fire({
@@ -40,27 +38,27 @@ const Login = ({setIsLogin}) => {
       //     clearInterval(timerInterval);
       //   }
       // })
-  
-    
-    //   .then((result) => {
-    //     if (result.dismiss === Swal.DismissReason.timer) {
-    //       console.log("I was closed by the timer");
-    //     }
-    //   });
-    // }
-    // else {
-    //   Swal.fire({
-    //     title: "שם/סיסמא שגויים",
-    //     text: "אין גישה למשתמש פרטי",
-    //     icon: "error"
-    //   });
+
+
+      //   .then((result) => {
+      //     if (result.dismiss === Swal.DismissReason.timer) {
+      //       console.log("I was closed by the timer");
+      //     }
+      //   });
+      // }
+      // else {
+      //   Swal.fire({
+      //     title: "שם/סיסמא שגויים",
+      //     text: "אין גישה למשתמש פרטי",
+      //     icon: "error"
+      //   });
     }
   }
 
   return (
     <>
       <Box
-      //מלבן סביב השדות
+        //מלבן סביב השדות
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -93,8 +91,7 @@ const Login = ({setIsLogin}) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             sx={{
-              // backgroundColor: '#FFC0CB', // צבע הרקע בורוד בהיר
-              '& .MuiOutlinedInput-root': {
+                '& .MuiOutlinedInput-root': {
                 '& fieldset': {
                   borderColor: 'blue', // צבע הקו החיצוני של השדה
                 },
@@ -104,9 +101,9 @@ const Login = ({setIsLogin}) => {
               },
             }}
             InputProps={{
-             
+
               startAdornment: <PersonIcon />,
-              
+
             }}
           />
           <TextField

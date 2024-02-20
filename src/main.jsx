@@ -9,14 +9,9 @@ import AdminHome from './components/admin/AdminHome.jsx';
 import Login from './components/admin/Login.jsx';
 import AdminPage from './components/admin/AdminPage.jsx';
 import BusinessDetailsComponent from './components/admin/BusinessDetailsComponent.jsx';
+import AddService from './components/services/AddService.jsx';
 
-{/* <nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav> */}
+
 
 const router = createBrowserRouter([
 
@@ -46,12 +41,14 @@ const router = createBrowserRouter([
       },
       {
         path: 'edit',
-        element: <BusinessDetailsComponent />,
-        // errorElement: <div>error business details not found</div>
+        element: <BusinessDetailsComponent />
+        // errorElement: <div>error business details not found</div>}
       },
+
+
       {
         path: 'addService',
-        element: <AddServiceToserver />,
+        element: <AddService />,
         // errorElement: <div>error business details not found</div>
       }
     ]
@@ -62,8 +59,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   <RouterProvider router={router} />
   // <React.StrictMode>
-
-
   // </React.StrictMode>,
 )
 

@@ -1,19 +1,14 @@
- /* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  margin: 25%;
-  margin-top : 5%;
+ :root {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
+}
+/* body {
+  background-image: url('images/1.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   /* background-position: center top; */
+/* } */ */
 
 a {
   font-weight: 500;
@@ -43,7 +38,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -68,10 +63,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } 
-body {
-  background-image: url('src/assets/images/1.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-   /* background-position: center top; */
-}

@@ -6,10 +6,11 @@ import { useParams } from "react-router-dom";
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import MyDataPicker from "../MyDataPicker";
-import EventType from "../adminEvents/EventType";
+// import EventType from "../adminEvents/EventType";
 import dataStore from "../../store/serviceStore";
 import ServiceList from "../services/ServicesList";
 import BusinessDetailsShow from "../admin/BusinessDetailsShow";
+import MyBackground from "../MyBackground";
 
 const User = observer(() => {
   // useEffect(() => {
@@ -25,6 +26,7 @@ const User = observer(() => {
   return (
     <>
       <header>
+      {/* <MyBackground /> */}
         <BusinessDetailsShow />
       </header>
 

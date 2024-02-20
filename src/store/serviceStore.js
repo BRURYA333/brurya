@@ -4,7 +4,26 @@ import { makeObservable, observable, action } from 'mobx';
 class ServiceStore {
   //data  
 
-  services = [];
+  services = [{
+    id: '0',
+    price: "250",
+    name: "עוגות יום הולדת",
+    describtion: " עוגות לילדים ועוגות לילדות, עוגות מספרים ועוגות של אותיות",
+    image: "/images/14.png",
+  },
+  {
+    id: '1',
+    price: "300",
+    name: " עוגות חתונה וימי נישואין",
+    describtion: "עוגות קומות עם קרם וקצפת עוגת טבעת ",
+    image: "/images/12.png",
+  },
+  {
+    id: '2',
+    price: "300",
+    name: " בר מתוקים",
+    describtion: "אין אין אין חגיגה, בלי בלי בלי עוגת יום הולדת",
+    image: "/images/16.png",  }];
 
 
   //export type data
@@ -24,7 +43,8 @@ class ServiceStore {
   updateServices(data) {
     if (data.length) {
       this.services = data
-    } else {
+    } 
+    else {
       this.services = [{
         id: '0',
         price: "250",

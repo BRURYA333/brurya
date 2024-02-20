@@ -1,39 +1,33 @@
 import { Button, TextField } from '@mui/material';
 import { useState } from 'react';
 import { AddServiceToserver } from '../../store/serviceServer.js';
+import SelectImage from './SelectImage.jsx';
+import serviceStore from '../../store/serviceStore.js';
 
-const AddService = () => {
-    const [name, setName] = useState('');
+const AddService = (service1={}) => {
+    const [cake, setCake] = useState('');
     const [description, setDescription] = useState('');
-    const [owner, setOwner] = useState('');
-    const [address, setAddress] = useState('');
-    const [phone, setPhone] = useState('');    
+    const [image, setImage] = useState('');
+    const [service, setService] = useState(service1);
 
     return (
         <>
-            <TextField id="name"
-                label="serviceName"
+            <TextField id="cake"
+                label="type_of_cake"
                 variant="outlined"
-                value={name} onChange={(e) => setName(e.target.value)} />
+                value={cake} onChange={(e) => setCake(e.target.value)} />
+            <br />
             <TextField id="description"
-                label="descriptionName"
+                label="description"
                 variant="outlined"
                 value={description} onChange={(e) => setDescription(e.target.value)} />
-            <TextField id="owner"
-                label="sownerName"
-                variant="outlined"
-                value={owner} onChange={(e) => setOwner(e.target.value)} />
-            <TextField id="address"
-                label="addressName"
-                variant="outlined"
-                value={address} onChange={(e) => setAddress(e.target.value)} />
-            <TextField id="phone"
-                label="phoneName"
-                variant="outlined"
-                value={phone} onChange={(e) => setPhone(e.target.value)} />
+           <br/>
 
-            <Button variant="contained" 
-            onClick={() => AddServiceToserver({ name })}>Add Service</Button>
+            <br />
+            <SelectImage value={service.image} setService={setService} serv={serviceStore}></SelectImage>
+            
+            <Button variant="contained"
+                onClick={() => AddServiceToserver({cake, description,image })}>הוספת עוגה למאגר</Button>
         </>
     )
 }

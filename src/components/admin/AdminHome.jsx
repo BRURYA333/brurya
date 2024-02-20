@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { observer } from "mobx-react";
+// import Button from '@mui/material/Button';
+// import ButtonGroup from '@mui/material/ButtonGroup';
+import Box from '@mui/material/Box';
 import { TextField, Button, Fab } from "@mui/material";
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -13,6 +16,8 @@ import DataStore from "../../store/serviceStore";
 import BusinessDetailsComponent from "./BusinessDetailsComponent";
 import './AdminHome.css';
 import { Link, Outlet } from "react-router-dom";
+import BusinessDetailsShow from "./BusinessDetailsShow";
+
 
 const AdminHome = observer(() => {
   return (
@@ -30,14 +35,15 @@ const AdminHome = observer(() => {
       >
         <EditIcon />
       </Fab> */}
-     
+
       <div className='button-container'>
-        <Button variant="outlined" ><Link to="services">services</Link></Button>
-        <Button variant="outlined" ><Link to="services">add service</Link></Button>
-        <Button variant="outlined" ><Link to="meeting">meeting</Link></Button>
-        <Button variant="outlined" ><Link to="edit">edit</Link></Button>
+        <Button className='buttonn' variant="outlined" ><Link to="services">העוגות שלנו</Link></Button>
+        <Button className='buttonn' variant="outlined" ><Link to="addservice">הוספת עוגה למאגר</Link></Button>
+        <Button className='buttonn' variant="outlined" ><Link to="meeting">הזמנות</Link></Button>
+        <Button className='buttonn' variant="outlined" ><Link to="edit">עריכת פרטים</Link></Button>
       </div>
-      {/* <BusinessDetailsComponent></BusinessDetailsComponent> */}
+      
+      <BusinessDetailsShow />
       <Outlet />
     </Container>
   );

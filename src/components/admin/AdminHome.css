@@ -4,3 +4,22 @@
     color:rgb(255, 117, 140);
     
 }
+
+.button-container {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10rem; /* רווח מעל לקבוצת הכפתורים */
+  }
+  
+  /* .buttonn {
+  }
+  
+  .buttonn a {
+
+  }
+  
+  .buttonn:hover {
+
+  }
+   */
+  

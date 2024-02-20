@@ -14,7 +14,7 @@ import { AddMeetingToserver } from "../../store/meetingServer";
 import './AddMeeting.css'
 
 const AddMeeting = observer(({ service }) => {
-
+  console.log(service)
   const [formData, setFormData] = useState({
     serviceName: service.name,
     serviceDescription: service.describtion,
@@ -23,8 +23,11 @@ const AddMeeting = observer(({ service }) => {
     clientEmail: '',
     meetingDateTime: null,
   });
-  const [image, setImages] = useState([]);
+
+  // const [image, setImages] = useState([]);
+
   const [isOpen, setIsOpen] = useState(false)
+
   // const images = [
   //   "src/assets/images/11.png",
   //   "src/assets/images/12.png",
@@ -33,7 +36,7 @@ const AddMeeting = observer(({ service }) => {
   //   "src/assets/images/15.png",
 
   // ];
-  
+
 
   const handleInputChange = (e) => {
     setFormData((prevData) => ({
@@ -74,9 +77,9 @@ const AddMeeting = observer(({ service }) => {
   return (
     <>
       <div className="center" >
-        <Button variant="contained" onClick={() => setIsOpen(true)}>I want it!</Button>
+        <Button variant="contained" onClick={() => setIsOpen(true)}>!בטח להזמין</Button>
         <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-          <DialogTitle>I want to invite a cake!</DialogTitle>
+          <DialogTitle>מלא פרטים, ונהיה בקשר...</DialogTitle>
           <DialogContent className="dialog">
             <form onSubmit={handleSubmit} className="form">
               <div className="form-item">
@@ -167,8 +170,8 @@ const AddMeeting = observer(({ service }) => {
             </form>
           </DialogContent>
           <DialogActions>
-            <Button onClick={() => setIsOpen(false)}>Cancel</Button>
-            <Button type="submit" onClick={handleSubmit}>Submit</Button>
+            <Button onClick={() => setIsOpen(false)}>ביטול</Button>
+            <Button type="submit" onClick={handleSubmit}>הזמנה</Button>
           </DialogActions>
         </Dialog>
       </div>
