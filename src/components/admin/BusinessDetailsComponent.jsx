@@ -7,6 +7,7 @@ import ServicesList from "../services/ServicesList";
 import AdminStore from '../../store/AdminStore';
 import './BusinessDetailsComponent.css';
 import { UpdateBusinessDetails } from '../../store/businessDetailsServer';
+import MyBackground from '../MyBackground';
 
 
 const BusinessDetailsComponent = observer(({ }) => {
@@ -24,49 +25,63 @@ const BusinessDetailsComponent = observer(({ }) => {
   };
   return (
     <>
-      <div className='fieldBussiness left'>
+      <header>
+        <MyBackground />
+      </header>
+      <div className='fieldBussiness'>
         <TextField
           label="Title"
           name="title"
           value={data.title}
           onChange={handleChange}
+          className="TextField"
         />
         <br />
+        <br />
+
         <TextField
           label="Description"
           value={data.description}
           name='description'
           onChange={handleChange}
+          className="TextField"
         />
         <br />
+        <br />
+
         <TextField
           label="Owner"
           name='owner'
           value={data.owner}
           onChange={handleChange}
+          className="TextField"
         />
         <br />
+        <br />
+
         <TextField
           label="Address"
           value={data.address}
           name='address'
           onChange={handleChange}
+          className="TextField"
         />
         <br />
+        <br />
+
         <TextField
           label="Phone"
           value={data.phone}
           name='phone'
           onChange={handleChange}
+          className="TextField"
         />
       </div>
 
-      <div className='left'>
-        <Button variant="contained" onClick={handleSave}>
-          Save
+      <div>
+        <Button class="MuiButtonBase-root special-button" variant="contained" onClick={handleSave} className="Button">
+          שמירה
         </Button>
-
-
       </div>
     </>
   );

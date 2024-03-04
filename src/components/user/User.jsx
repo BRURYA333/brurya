@@ -6,31 +6,28 @@ import { useParams } from "react-router-dom";
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import MyDataPicker from "../MyDataPicker";
-// import EventType from "../adminEvents/EventType";
 import dataStore from "../../store/serviceStore";
 import ServiceList from "../services/ServicesList";
 import BusinessDetailsShow from "../admin/BusinessDetailsShow";
 import MyBackground from "../MyBackground";
+import { GetBussinessDetails } from "../../store/businessDetailsServer";
+
 
 const User = observer(() => {
-  // useEffect(() => {
-  //   localStorage.removeItem('isLogin');
-  //   dataStore.myBusinessDetails();
-  //    console.log("log",dataStore.services.length);
-
-  // }
-  // , []);
+  useEffect(() => {
+   GetBussinessDetails();
+  } , []);
 
   const { id } = useParams();
 
   return (
     <>
       <header>
-      {/* <MyBackground /> */}
-        <BusinessDetailsShow />
+        <MyBackground />
       </header>
 
-      <div >
+      <div>
+        <BusinessDetailsShow/>
         <ServiceList></ServiceList>
       </div>
     </>
@@ -38,20 +35,5 @@ const User = observer(() => {
 });
 
 
-
-// const User = observer(({ dataStore }) => {
-//     return(
-//         <>
-//         <ServiceList dataStore={dataStore} />  //רשימת השירותים
-
-//             <EventType/>
-//             <LocalizationProvider dataAdapter={AdapterDayjs}>
-//                 <MyDataPicker/>
-//             </LocalizationProvider>
-
-//        </>
-//     )
-
-// })
 export default User
 

@@ -4,24 +4,13 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-color: rgba(255, 0, 136, 0.349);
+
   }
   
-  /* .button {
-    background-color: #ff5a94;    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-
-
-  } */
-
-  
   .dialog {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
-
   }
   
   .dialog-title {
@@ -45,7 +34,6 @@ color: rgba(255, 0, 136, 0.349);
   .textField {
     width: 100%;
     cursor: pointer;
-
   }
   
   .actions {
@@ -55,17 +43,18 @@ color: rgba(255, 0, 136, 0.349);
   }
   
   .actions-button {
+    background-color: black ;
     margin-left: 10px;
   }
   .css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    
     width: 40%;
     background-color: rgb(37, 113, 88);
   }
-  body{
-    background-color: #ffffff;
-  }
+
   .css-sghohy-MuiButtonBase-root-MuiButton-root {
-    background-color: black;
+    background-color: rgb(255, 86, 86) !important;
+    margin-right:50% !important;
   }
   .datePickerTextField {
     width: 100%;
@@ -77,6 +66,6 @@ color: rgba(255, 0, 136, 0.349);
     height: 100px;
   }
   .center{
-    margin-left:3em;
+    margin-left:2em;
     border-bottom-color:#ff5a94;
   }

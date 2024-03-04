@@ -17,24 +17,14 @@ import BusinessDetailsComponent from "./BusinessDetailsComponent";
 import './AdminHome.css';
 import { Link, Outlet } from "react-router-dom";
 import BusinessDetailsShow from "./BusinessDetailsShow";
-
+import MyBackground from "../MyBackground";
 
 const AdminHome = observer(() => {
   return (
     <Container>
 
-      {/* <Fab
-        color="blue"
-        aria-label="add"
-        onClick={handleEditModeToggle} // Toggle the isEditMode variable on button click
-        style={{
-          position: 'fixed !imporotant',
-          top: '30px !imporotant',
-          right: '30px !imporotant',
-        }}
-      >
-        <EditIcon />
-      </Fab> */}
+      <MyBackground></MyBackground>
+      <BusinessDetailsShow />
 
       <div className='button-container'>
         <Button className='buttonn' variant="outlined" ><Link to="services">העוגות שלנו</Link></Button>
@@ -42,8 +32,7 @@ const AdminHome = observer(() => {
         <Button className='buttonn' variant="outlined" ><Link to="meeting">הזמנות</Link></Button>
         <Button className='buttonn' variant="outlined" ><Link to="edit">עריכת פרטים</Link></Button>
       </div>
-      
-      <BusinessDetailsShow />
+
       <Outlet />
     </Container>
   );

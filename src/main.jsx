@@ -11,14 +11,12 @@ import AdminPage from './components/admin/AdminPage.jsx';
 import BusinessDetailsComponent from './components/admin/BusinessDetailsComponent.jsx';
 import AddService from './components/services/AddService.jsx';
 
-
-
 const router = createBrowserRouter([
 
   {
     path: '/',
     element: <User />,
-    // errorElement:<div>error services list !</div>,
+    errorElement:<div>error services list !</div>,
 
   },
 

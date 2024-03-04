@@ -1,0 +1,54 @@
+.addService{
+    /* text-align: center !important; */
+    margin:50px;
+    /* gap: 5em; */
+    display: inline-block;
+    margin-top: -50rem;   
+}
+
+/* דוגמה להגדרת עיצוב מותאם אישית של רכיב MUI Select */
+.MuiInputBase-input{
+    height: inherit;
+    width:100% !important;
+}
+.MuiInputBase-rootMuiOutlinedInput-root{
+margin-right:-85em;
+}
+/* נסיר את הגובה המינימלי של התיבת בחירה */
+/* .MuiSelect-root { */
+    /* min-height: unset !important; */
+    /* text-align: center !important; */
+/* } */
+/* .MuiInputBase-formControl{
+
+} */
+
+/* נסיר את המרווחים בתוך התיבת בחירה */
+.MuiInputBase-root {
+    padding:5px !important;
+    width: 25rem !important;
+    text-align: center !important;
+}
+
+/* נסיר את המרווחים בין האפשרויות ברשימת הנפתחת */
+.MuiMenu-paper {
+    padding: 10px !important;
+    text-align: center !important;
+}
+
+/* נסיר פסים ומסגרות מסביב לתיבת הבחירה */
+.MuiSelect-root.MuiSelect-select {
+    text-align: center !important;
+    border: 1px !important;
+    background-color: transparent !important;
+}
+
+/* צבע טקסט ורקע של האפשרויות ברשימת הנפתחת */
+.MuiMenuItem-root {
+    width: 40%;
+    color: black !important;
+    background-color: rgb(233, 233, 233) !important;
+    text-align: center !important;
+}
+
+

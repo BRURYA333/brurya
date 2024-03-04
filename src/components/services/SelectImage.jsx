@@ -8,13 +8,13 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import CardMedia from '@mui/material/CardMedia';
 
-const SelectImage = (observer(({setService,serv}) => {
+const SelectImage = (observer(({ setImage }) => {
 
-  const [SelectImage, setSelectImage] = useState('');
+  // const [SelectImage, setSelectImage] = useState('');
   const handleChange = (event) => {
 
-    setSelectImage(event.target.value);
-     setService({...serv,image:event.target.value});
+    // setSelectImage(event.target.value);
+    setImage(event.target.value);
   }
 
 
@@ -30,17 +30,17 @@ const SelectImage = (observer(({setService,serv}) => {
           onChange={handleChange}
         >
           <MenuItem value={'/images/11.png'}>
-          <CardMedia component="img" height="100" width="100" image='/images/11.png'/></MenuItem>
+            <CardMedia component="img" height="100" width="100" image='/images/11.png' /></MenuItem>
           <MenuItem value={'/images/12.png'}>
-          <CardMedia component="img" height="100" width="100" image='/images/12.png'/></MenuItem>
+            <CardMedia component="img" height="100" width="100" image='/images/12.png' /></MenuItem>
           <MenuItem value={'/images/13.png'}>
-          <CardMedia component="img" height="100" width="100" image='/images/13.png'/></MenuItem>
+            <CardMedia component="img" height="100" width="100" image='/images/13.png' /></MenuItem>
           <MenuItem value={'/images/14.png'}>
-          <CardMedia component="img" height="100" width="100" image='/images/14.png'/></MenuItem>
+            <CardMedia component="img" height="100" width="100" image='/images/14.png' /></MenuItem>
           <MenuItem value={'/images/15.png'}>
-          <CardMedia component="img" height="100" width="100" image='/images/15.png'/></MenuItem>
+            <CardMedia component="img" height="100" width="100" image='/images/15.png' /></MenuItem>
           <MenuItem value={'/images/16.png'}>
-          <CardMedia component="img" height="100" width="100" image='/images/16.png'/></MenuItem>
+            <CardMedia component="img" height="100" width="100" image='/images/16.png' /></MenuItem>
         </Select>
       </FormControl>
     </Box>

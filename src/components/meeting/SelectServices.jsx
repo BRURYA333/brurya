@@ -10,8 +10,6 @@ import Select from '@mui/material/Select';
 import CardMedia from '@mui/material/CardMedia';
 import dataStore from '../../store/dataStore';
 
-
-
 const SelectServices = (observer(({selectedService,setSelectedService}) => {
 
     const handleChange = (event) => {
@@ -23,7 +21,6 @@ const SelectServices = (observer(({selectedService,setSelectedService}) => {
     //  setMeeting({...meet,image:event.target.value});
 
   }
-
 
   return (
     <div>

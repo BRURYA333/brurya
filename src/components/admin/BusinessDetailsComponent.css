@@ -1,9 +1,55 @@
-.fieldBussiness{
-   text-align: right; 
-   padding:2em;
-   width: max-content;
 
-}
-.left{
-    margin-left:40vw ;
+
+/* עיצוב כללי לכפתור */
+.MuiButton-root {
+    background-color: #305431;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  /* עיצוב כללי לשדה טקסט */
+  .MuiTextField-root {
+    text-align: center;
+    /* margin-left: 50%; */
+    width: 40%;
+    padding: 15px 20px;
+    margin: 8px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box;
+  }
+  .fieldBussiness{
+    font-family:sans-serif;
+    text-align: center;
+    padding: 2em;
+    margin-right: 51rem;
+    margin-top: -26rem;
+  }
+
+  .TextField{
+    font-family: sans-serif;
+
+  }
+  .special-button {
+    margin-left:32% !important;
+    background-color: #0c6cc6;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }

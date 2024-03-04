@@ -3,23 +3,30 @@ import { useEffect, useState } from 'react';
 import dataStore from '../../store/serviceStore';
 import ServiceCard from './ServicesCard';
 import { GetServices } from '../../store/serviceServer';
+import MyBackground from '../MyBackground';
 
 
 const ServiceList = observer(() => {
     console.log(dataStore.services);
-    // const [isAdd, setAdd] = useState(false);
+ 
     useEffect(() => {
-        if (!dataStore.services.length) {
-            GetServices();
-        }
+
+        GetServices();
+
     }, [])
+    
     return (
         <>
-            {dataStore.services.map((service, index) => {
-                return <div key={index}> <ServiceCard service={service} /> </div>
-            }
-            )}
-            {/* <button> add cake</button> */}
+              <header>
+        <MyBackground />
+      </header>
+            <div className='card1'>
+                {dataStore.services.map((service, index) => {
+                    return <div key={index}>
+                        <ServiceCard service={service} /> </div>
+                }
+                )}
+            </div>
         </>
     )
 })

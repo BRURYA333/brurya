@@ -5,7 +5,7 @@ import { StaticDateTimePicker } from '@mui/x-date-pickers/StaticDateTimePicker';
 function MyDataPicker({ children }) {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <StaticDateTimePicker orientation="landscape" />
+      <StaticDateTimePicker orientation="landscape" />
     </LocalizationProvider>
   );
 }

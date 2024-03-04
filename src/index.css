@@ -1,16 +1,10 @@
  :root {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  font-family: sans-serif;
 }
-/* body {
-  background-image: url('images/1.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-   /* background-position: center top; */
-/* } */ */
 
 a {
+  font-family: sans-serif;
+
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -18,21 +12,15 @@ a {
 a:hover {
   color: #535bf2;
 }
-/* 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
 
 h1 {
+  font-family: sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
+  font-family: sans-serif;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -53,8 +41,9 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
+    font-family: sans-serif;
     color: #213547;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
   }
   a:hover {
     color: #747bff;

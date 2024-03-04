@@ -1,5 +1,31 @@
-.details{
-  margin-top: 10%;
-  margin-left: 50%;
+:root {
+  font-family: sans-serif;
+  color: #213547;
+}
+
+.details {
+  font-family: sans-serif;
+  margin-top: 20%; /* מרווח מעל */
+  margin-right: -55%; /* מרווח מימין */
   text-align: center;
+}
+
+.custom-text {
+  font-family: sans-serif;
+  font-size: 18px; /* גודל הפונט */
+  color: rgb(70, 70, 71); /* צבע הטקסט */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .details {
+    margin-right: -15%; /* שינוי במרווח מימין במסך בגודל בינוני */
+  }
+}
+
+@media (max-width: 576px) {
+  .details {
+    margin-right: 0; /* במסך קטן יותר אין צורך במרווח מימין */
+    margin-top: 10%; /* נמקם את המרווח מעל יותר לקריאות טובה יותר */
+  }
 }

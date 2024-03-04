@@ -17,33 +17,22 @@ const AddMeeting = observer(({ service }) => {
   console.log(service)
   const [formData, setFormData] = useState({
     serviceName: service.name,
-    serviceDescription: service.describtion,
+    serviceDescription: service.description,
     clientName: '',
     clientPhone: '',
     clientEmail: '',
     meetingDateTime: null,
   });
 
-  // const [image, setImages] = useState([]);
-
   const [isOpen, setIsOpen] = useState(false)
-
-  // const images = [
-  //   "src/assets/images/11.png",
-  //   "src/assets/images/12.png",
-  //   "src/assets/images/13.png",
-  //   "src/assets/images/14.png",
-  //   "src/assets/images/15.png",
-
-  // ];
-
-
+  const [isValid, setIsValid] = useState(false)
   const handleInputChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
     }));
   };
+  
   const handleDateTimeChange = (dateTime) => {
     const formattedDateTime = dateTime.format('YYYY-MM-DDTHH:mm:ss');
     setFormData((prevData) => ({
@@ -57,16 +46,15 @@ const AddMeeting = observer(({ service }) => {
     // event.preventDefault();
 
     if (formData.clientEmail !== "" && formData.dateTime !== "" && formData.clientName !== "" && formData.clientName !== "") {
-      AddMeetingToserver(formData)
+      AddMeetingToserver({data:formData, setIsValid})
     }
-
 
     setIsOpen(false);
     console.log("form", formData.clientEmail, formData.dateTime)
     // איפוס המשתנים
     setFormData({
       serviceName: service.name,
-      serviceDescription: service.describtion,
+      serviceDescription: service.description,
       clientName: '',
       clientPhone: '',
       clientEmail: '',
@@ -92,6 +80,7 @@ const AddMeeting = observer(({ service }) => {
                   onChange={handleInputChange}
                   placeholder="type of cake"
                   className="textField"
+                  required
                 />
               </div>
 
@@ -105,6 +94,7 @@ const AddMeeting = observer(({ service }) => {
                   onChange={handleInputChange}
                   placeholder="clientName"
                   className="textField"
+                  required
                 />
               </div>
 
@@ -118,6 +108,7 @@ const AddMeeting = observer(({ service }) => {
                   onChange={handleInputChange}
                   placeholder="clientEmail"
                   className="textField"
+                  required
                 />
               </div>
 
@@ -131,6 +122,7 @@ const AddMeeting = observer(({ service }) => {
                   onChange={handleInputChange}
                   placeholder="clientPhone"
                   className="textField"
+                  required
                 />
               </div>
 
@@ -154,6 +146,7 @@ const AddMeeting = observer(({ service }) => {
                   renderInput={(props) => (
                     <TextField
                       {...props}
+                      color={ isValid === true ? 'success' : 'error'}
                       variant="outlined"
                       className="inputs"
                       name="dateTime"

@@ -1,0 +1,41 @@
+.meet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.meet {
+  width: 30%; /* רוחב הכרטיס במסך רחב */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .meet {
+    width: 35%; /* רוחב הכרטיס במסך בגודל בינוני */
+  }
+}
+
+@media (max-width: 576px) {
+  .meet {
+    width: 100%; /* הכרטיסים ימלאו את רוחב המסך בגודל ממוזער מאוד */
+  }
+}
+
+.red {
+  background-color: rgb(190, 0, 0);
+}
+
+.orange {
+  background-color: rgb(255, 166, 0);
+}
+
+.green {
+  background-color: green;
+}
+
+.purple {
+  background-color: purple;
+}

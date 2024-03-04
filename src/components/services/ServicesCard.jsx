@@ -1,17 +1,17 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Button, CardActionArea, CardActions } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, CardActionArea } from '@mui/material';
 import AddMeeting from '../meeting/AddMeeting';
-import './ServicesCard.css'
-
+import './ServicesCard.css';
 
 function ServiceCard({ service }) {
 
   return (
-    
-      <div className='grid-container' >
-        <div className='card'>
-       
-        <Card sx={{ maxWidth: 220 }}>
+
+    // <div className="parent-container">
+    <div>
+      <div>
+        <Card sx={{ maxWidth: 220 }} className="card1">
+
           <CardActionArea>
             <CardMedia
               component="img"
@@ -20,23 +20,21 @@ function ServiceCard({ service }) {
               alt={service.image}
             />
             <CardContent>
-              
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h4" component="div">
                 {service.name}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {service.describtion}
+              <Typography variant="h6" color="text.secondary" component="div">
+                {service.description}
               </Typography>
-
+              <AddMeeting service={service} />
             </CardContent>
-          </CardActionArea>
-        </Card>
 
-        <AddMeeting service={service} />
-        
-        <br></br>
-        </div>
-    </div >
+          </CardActionArea>
+
+        </Card>
+      </div>
+    </div>
   );
 }
+
 export default ServiceCard;
